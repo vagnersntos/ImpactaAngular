@@ -1,0 +1,17 @@
+<div>
+    <h2>Implementação ngClass</h2>
+    <div [ngClass]="'color size'">
+        <p>
+            Cor e fonte alterado pelas propriedades CSS do arquivo .css
+        </p>
+    </div>
+
+    <div [ngClass]="cssAlterado">
+        Cor e fonte alterados pelas propriedades CSS - descritas no arquivo .ts
+    </div>
+
+    <div [ngClass]="objCSS">
+        Cor e fonte alterados pelas propriedades CSS - descritas no arquivo .ts
+        com atribuição de instância da PropsCss
+    </div>
+</div>
