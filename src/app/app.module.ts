@@ -16,6 +16,7 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
+import { AlterarTextoDirective } from './alterar-texto.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NgStyleComponent } from './ng-style/ng-style.component';
     NgIfComponent,
     NgForComponent,
     NgClassComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    AlterarTextoDirective
   ],
   imports: [
     BrowserModule,
