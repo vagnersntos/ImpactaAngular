@@ -1,0 +1,30 @@
+<table>
+    <thead>
+        <tr>
+            <th>UpperCase Pipe</th>
+            <th>LowerCase</th>
+            <th>Date - Pipe para conversão de datas</th>
+            <th>currency - Moeda</th>
+            <th>Decimal - Formatação a partir de casas númericas</th>
+            <th>Pipe Personalizado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{title | uppercase }}</td>
+            <td>{{title | lowercase}}</td>
+            <td>{{dataHoje| date: "shortTime"}}</td>
+            <br/>
+            <td>{{dataHoje | date: "d/M/y"}}</td>
+            <td>{{numFloat | currency: "USD"}}</td>
+            <br/>
+            <td>{{numFloat | currency: "BRL"}}</td>
+            <td>{{numDecimal | number: '3.3-2'}}</td>
+            <td>{{raizUm | raizquadrada}}</td>
+            <br/>
+            <td>{{raizDois | raizquadrada}}</td>
+            <br/>
+            <td>{{raizTres | raizquadrada}}</td>
+        </tr>
+    </tbody>
+</table>

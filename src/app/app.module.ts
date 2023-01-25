@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
+
+import {LOCALE_ID, DEFAULT_CURRENCY_CODE} from '@angular/core';
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +22,12 @@ import { NgForComponent } from './ng-for/ng-for.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { AlterarTextoDirective } from './alterar-texto.directive';
+import { PipeComponent } from './pipe/pipe.component';
+import { RaizQuadrada } from './pipe-raiz-quadrada';
+import { FormTemplateComponent } from './form-template/form-template.component';
+import { FormModelComponent } from './form-model/form-model.component';
+
+registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [
@@ -33,14 +44,27 @@ import { AlterarTextoDirective } from './alterar-texto.directive';
     NgForComponent,
     NgClassComponent,
     NgStyleComponent,
-    AlterarTextoDirective
+    AlterarTextoDirective,
+    PipeComponent,
+    RaizQuadrada,
+    FormTemplateComponent,
+    FormModelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt'
+  },
+  {
+    provide: DEFAULT_CURRENCY_CODE,
+    useValue: 'BRL'
+  }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

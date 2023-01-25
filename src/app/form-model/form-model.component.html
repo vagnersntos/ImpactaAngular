@@ -1,0 +1,13 @@
+
+<div>
+    <form [formGroup]="dadosForm" (ngSubmit)="exibirDados(dadosForm.value)">
+        <input type="email" name="email" placeholder="Informe seu e-mail" formControlName="email"/>
+        <br/><br/>
+        <input type="password" name="password" placeholder="Informe sua senha" formControlName="senha"/>
+        <br/><br/>
+        <input type="submit" value="Enviar Dados" [disabled]="!dadosForm.valid"/>
+    </form>
+    <p>O email informado é: {{email}}</p>
+    <br/>
+    <p> A senha Informada é: {{senha}}</p>
+</div>
